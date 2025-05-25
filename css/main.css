@@ -1,8 +1,10 @@
-/* Web Font */
+/* Font */
 @font-face {
   font-family: 'Pretendard';
-  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard.woff') format('woff');
-  font-style: normal;
+  font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+	src: url('../font/PretendardVariable.woff2') format('woff2-variations');
 }
 
 /* reset */
@@ -17,6 +19,7 @@
   font-size: 16px;
   white-space: -2.5px;
   font-family: 'Pretendard';
+  word-break: keep-all;
 }
 
 img {
@@ -93,7 +96,7 @@ section {
   display: flex;
   color: white;
   padding: 10px 24px 10px 12px;
-  margin-right: 4px;
+  margin-right: 12px;
 }
 
 .logo {
@@ -141,7 +144,7 @@ section {
 /* heroSection */
 .heroSection {
   height: 100vh;
-  background: url("/img/mainBg.svg");
+  background: url("../img/mainBg.svg");
   text-align: center;
 }
 
@@ -335,12 +338,161 @@ section {
   object-fit: cover;
 }
 
+.web > div,
+.design > div {
+  justify-content: space-between;
+}
 
+.web .left,
+.design .left {
+  position: sticky;
+  top: 46px;
+  left: 0;
+  height: fit-content;
+  width: 25%
+}
 
+.web .right,
+.design .right {
+  width: 70%
+}
 
+.web .right .item {
+  border-top: 1px solid #d7dce5;
+  padding: 44px 0;
+  justify-content: space-between;
+}
 
+.web .right .itemImg {
+  width: 196px;
+  height: 236px;
+  display: block;
+}
 
+.web .right .item > div {
+ width: calc(100% - 32px - 196px);
+}
 
+.web .right .item > div span {
+  display: block;
+}
+
+.web .right .item > div .highlight {
+  color: #c0ff5a;
+}
+
+.web .right .subTitle {
+  font-size: 18px;
+  margin-bottom: 32px;
+}
+
+.testArea {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btnArea button {
+  padding: 10px 20px;
+  border-radius: 12px;
+  background-color: #2B2B2B;
+  color: white;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btnArea button::after {
+    content: '';
+  width: 0;
+  height: 100%;
+  display: block;
+  background-color: #ffffff42;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition:.3s
+}
+
+.btnArea button:nth-of-type(1) {
+  margin-right: 12px;
+  background-color: #05a552;
+  color: #141414;
+  font-weight: 900;
+}
+.page {
+  font-weight: 900;
+}
+.innerTitle {
+  width: 80px;
+}
+
+.btnArea button:hover::after {
+  width: 100%;
+}
+
+.web .right .item > div > div div {
+  width: calc(100% - 80px);
+}
+
+.design .firstLine,
+.design .secondLine,
+.design .thirdLine,
+.design .forthLine {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.design .firstLine .item {
+  width: calc(25% - 18px);
+}
+
+.design .secondLine .item {
+  width: 100%;
+}
+
+.design .thirdLine .item:nth-of-type(1),
+.design .forthLine .item:nth-of-type(2) {
+  width: calc(25% - 12px);
+}
+
+.design .thirdLine .item:nth-of-type(2),
+.design .forthLine .item:nth-of-type(1) {
+  width: calc(75% - 12px);
+}
+
+.design .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.imageViewer {
+  display: none;
+}
+
+.imageViewer.on {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: .4s;
+  background-color: #0000001f;
+  backdrop-filter: blur(5px);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageViewer .image {
+  width: auto;
+  max-height: 90vh;
+  object-fit: cover;
+}
 
 
 
