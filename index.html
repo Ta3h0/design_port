@@ -6,6 +6,8 @@
   <title>Ta3h0 포트폴리오</title>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"
     integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css" />
 
 </head>
@@ -13,15 +15,14 @@
 <body>
   <header class="headerPannel">
     <ul class="headerMenu">
-      <img src="./img/logo.svg" alt="No Logo" class="logo" />
-      <li class="active">Home</li>
-      <li>About Me</li>
-      <li>Web</li>
-      <li>Design</li>
-      <li>End</li>
-      <img src="./img/headerBg.svg" alt="Header Background" class="headerBg" />
+      <img src="./img/logo.svg" alt="No Logo" class="logo" draggable="false" />
+      <li class="c-pointer active headerHero" onclick="goTab('heroSection')">Home</li>
+      <li class="c-pointer headerAboutMe" onclick="goTab('aboutMe')">About Me</li>
+      <li class="c-pointer headerWeb" onclick="goTab('web')">Web</li>
+      <li class="c-pointer headerDesign" onclick="goTab('design')">Design</li>
+      <img src="./img/headerBg.svg" alt="Header Background" class="headerBg" draggable="false" />
     </ul>
-    <div class="headerContect">Contect</div>
+    <div class="headerContect c-pointer" onclick="goTab('footer')">Contect</div>
   </header>
 
   <main>
@@ -41,8 +42,10 @@
       <p class="subText" style="margin-top: 44px;">안녕하세요<br>디자인・개발・기획을 무기로 가진 1년 차 웹 디자이너 김태호입니다.</p>
       <div
         style="padding:12px 24px; border-radius: 1000px; background-color: #c7ff6a; font-weight: 600; margin-top: 20px; display: inline-block;">
-        <div style="display: flex; align-items: center; color: #141414;font-weight: bold;">
-          스크롤해서 확인해보세요
+        <div style="display: flex; align-items: center;">
+          <p style="font-weight: bold; color: #141414;">
+            스크롤해서 확인해보세요
+          </p>
           <div class="wheelIcon">
             <div class="wheelAni"></div>
           </div>
@@ -52,41 +55,41 @@
       <div>
         <div class="squareArea">
           <div class="square">
-            <img src="./img/icon/1.svg" alt="No square Icon">
+            <img src="./img/icon/1.svg" alt="No square Icon" draggable="false">
           </div>
           <div class="square">
-            <img src="./img/icon/2.svg" alt="No square Icon">
+            <img src="./img/icon/2.svg" alt="No square Icon" draggable="false">
           </div>
           <div class="square">
-            <img src="./img/icon/3.svg" alt="No square Icon">
+            <img src="./img/icon/3.svg" alt="No square Icon" draggable="false">
           </div>
           <div class="square">
-            <img src="./img/icon/4.svg" alt="No square Icon">
+            <img src="./img/icon/4.svg" alt="No square Icon" draggable="false">
           </div>
           <div class="square">
-            <img src="./img/icon/5.svg" alt="No square Icon">
+            <img src="./img/icon/5.svg" alt="No square Icon" draggable="false">
           </div>
         </div>
       </div>
     </section>
 
     <section class="aboutMe">
-      <h1 class="sectionTitle">About Me</h1>
+      <h1 class="sectionTitle" data-aos="fade-right">About Me</h1>
       <div class="inner">
-        <div class="avatarArea">
-          <img src="./img/avatar.png" alt="No avatar">
+        <div class="avatarArea" data-aos="fade-right">
+          <img src="./img/avatar.png" alt="No avatar" draggable="false">
           <div class="hashTag">
             <span>#ENFP</span>
             <span>#책임감</span>
             <span>#성장갈망</span>
             <span>#적극성</span>
           </div>
-          <button class="evaluation c-pointer">주변 사람들의 평가 <img src="./img/icon/rightArrow.svg" alt="No icon" /></button>
+          <button class="evaluation c-pointer">주변 사람들의 평가 <img src="./img/icon/rightArrow.svg" alt="No icon"  draggable="false"/></button>
         </div>
 
         <div class="contour"></div>
 
-        <div class="infoArea">
+        <div class="infoArea" data-aos="fade-left" data-aos-anchor=".avatarArea">
           <div style="margin-top: 0 !important;">
             <h4 class="title">Who am I?</h4>
             <div class="d-flex">
@@ -134,17 +137,17 @@
           <div>
             <h4 class="title">Skills</h4>
             <div class="d-flex">
-              <img src="./img/icon/vue.png" alt="vue icon" style="margin-left: 0;">
-              <img src="./img/icon/js.png" alt="js icon">
-              <img src="./img/icon/html.png" alt="html icon">
-              <img src="./img/icon/css.png" alt="css icon">
-              <img src="./img/icon/query.png" alt="jquery icon">
-              <img src="./img/icon/react.png" alt="react icon">
+              <img src="./img/icon/vue.png" alt="vue icon" style="margin-left: 0;" draggable="false">
+              <img src="./img/icon/js.png" alt="js icon" draggable="false">
+              <img src="./img/icon/html.png" alt="html icon" draggable="false">
+              <img src="./img/icon/css.png" alt="css icon" draggable="false">
+              <img src="./img/icon/query.png" alt="jquery icon" draggable="false">
+              <img src="./img/icon/react.png" alt="react icon" draggable="false">
             </div>
             <div class="d-flex" style="margin-top: 12px;">
-              <img src="./img/icon/figma.png" alt="figma icon" style="margin-left: 0;">
-              <img src="./img/icon/photoshop.png" alt="photoshop icon">
-              <img src="./img/icon/illustrator.png" alt="illustrator icon">
+              <img src="./img/icon/figma.png" alt="figma icon" style="margin-left: 0;" draggable="false">
+              <img src="./img/icon/photoshop.png" alt="photoshop icon" draggable="false">
+              <img src="./img/icon/illustrator.png" alt="illustrator icon" draggable="false">
             </div>
           </div>
         </div>
@@ -153,24 +156,24 @@
     </section>
 
     <section class="interview">
-      <h1 class="sectionTitle">Interview</h1>
+      <h1 class="sectionTitle" data-aos="fade-right">Interview</h1>
       <div class="d-flex">
-        <div class="item">
+        <div class="item" data-aos="fade-down-right">
           <h3 class="title">Q. 웹 디자이너로 전향한 이유는?</h3>
           <p>성대 수술 이후, 더이상 전공을 살릴 수 없어 어릴 적 흥미 있었던 개발에 다시 관심이 생겼고, 혼자 개발을 배우며 디자인도 함께 익히게 되었습니다. 그 과정에서 사용자의 반응을 만들어내고
             사용자를 설득하는 디자인의 매력에 빠지게 되어 전향하게 되었습니다.</p>
         </div>
-        <div class="item">
+        <div class="item" data-aos="fade-down-left" data-aos-delay="500">
           <h3 class="title">Q. 협업할 때 가장 중요하게 생각하는 점은?</h3>
           <p>협업은 각자의 역할은 달라도 같은 목표를 향해 나아가기 때문에, 저는 소통을 우선시하고 함께 의도를 충분히 나누며 피드백은 열린 마음으로 수용하는 것이라고 생각합니다. 또한 효율적인 일정
             관리를 통해 책임감 있는 팀원이 되기 위해 노력합니다.</p>
         </div>
-        <div class="item">
+        <div class="item" data-aos="fade-up-right" data-aos-delay="500">
           <h3 class="title">Q. 본인이 생각하는 ‘좋은 디자인’이란?</h3>
           <p>사용자에게 좋은 경험을 제공하는 것이라고 생각합니다. 사용자의 좋은 경험이 자연스럽게 원하는 행동(구매, 전환 등)을 하게 만들 것이고 이것이 서비스의 성장, 회사의 성장 더 나아가 개인의
             성장도 함께 만든다고 생각합니다.</p>
         </div>
-        <div class="item">
+        <div class="item" data-aos="fade-up-left" data-aos-delay="1000">
           <h3 class="title">Q. 작업 중 문제 발생 시 해결 방법은?</h3>
           <p>저는 사용자, 기획자, 개발자, 회사가 모두 연결되는 서비스가 좋은 서비스라고 생각합니다. 디자인 과정에서 피드백이나 요청이 들어오게 되면 의도와 목적을 공유하고 시선을 바꾸어 최선의 방향을
             빠르게 제시하려고 합니다.</p>
@@ -180,31 +183,31 @@
 
     <section class="carousel-wrapper f-width">
       <div class="carousel-track">
-        <div class="carousel-item"><img src="./img/icon/vue.svg" alt="vue icon"></div>
-        <div class="carousel-item"><img src="./img/icon/js.svg" alt="js icon"></div>
-        <div class="carousel-item"><img src="./img/icon/html.svg" alt="html icon"></div>
-        <div class="carousel-item"><img src="./img/icon/css.svg" alt="css icon"></div>
-        <div class="carousel-item"><img src="./img/icon/query.svg" alt="jquery icon"></div>
-        <div class="carousel-item"><img src="./img/icon/react.svg" alt="react icon"></div>
-        <div class="carousel-item"><img src="./img/icon/figma.svg" alt="figma icon"></div>
-        <div class="carousel-item"><img src="./img/icon/photoshop.svg" alt="photoshop icon"></div>
-        <div class="carousel-item"><img src="./img/icon/illustrator.svg" alt="illustrator icon"></div>
+        <div class="carousel-item"><img src="./img/icon/vue.svg" alt="vue icon" draggable="false"></div>
+        <div class="carousel-item"><img src="./img/icon/js.svg" alt="js icon" draggable="false"></div>
+        <div class="carousel-item"><img src="./img/icon/html.svg" alt="html icon" draggable="false"></div>
+        <div class="carousel-item"><img src="./img/icon/css.svg" alt="css icon" draggable="false"></div>
+        <div class="carousel-item"><img src="./img/icon/query.svg" alt="jquery icon" draggable="false"></div>
+        <div class="carousel-item"><img src="./img/icon/react.svg" alt="react icon" draggable="false"></div>
+        <div class="carousel-item"><img src="./img/icon/figma.svg" alt="figma icon" draggable="false"></div>
+        <div class="carousel-item"><img src="./img/icon/photoshop.svg" alt="photoshop icon" draggable="false"></div>
+        <div class="carousel-item"><img src="./img/icon/illustrator.svg" alt="illustrator icon" draggable="false"></div>
       </div>
-      <img src="./img/fade.png" alt="" class="fade">
+      <img src="./img/fade.png" alt="" class="fade" draggable="false">
     </section>
 
     <section class="web">
       <div class="d-flex">
-        <div class="left">
+        <div class="left" data-aos="fade-right">
           <h4 class="sectionTitle" style="margin-bottom: 12px">Web Project</h4>
           <p style="padding-right:40px">가상의 브랜드를 기획하여 제작한 프로젝트부터
             리뉴얼 및 반응형 프로젝트까지
             다양한 방면으로 개발하였습니다</p>
         </div>
 
-        <div class="right">
+        <div class="right" data-aos="fade-left" data-aos-delay="500">
           <div class="item d-flex">
-            <img src="./img/portLive.png" alt="portLive 이미지" class="itemImg" />
+            <img src="./img/portLive.png" alt="portLive 이미지" class="itemImg"  draggable="false"/>
             <div class="d-flex testArea">
               <p class="subTitle">
                 포트라이브 :: 포트폴리오 피드백 및 레퍼런스 공유 플랫폼
@@ -212,25 +215,25 @@
               <div>
                 <div class="d-flex">
                   <p class="innerTitle">작업기간</p>
-                  <span>9일</span>
+                  <span>5일</span>
                 </div>
                 <div class="d-flex" style="margin: 12px 0 24px 0;">
                   <p class="innerTitle">개요</p>
                   <div>
-                    <span class="highlight">기획, 디자인, 개발 100% 개인참여</span>
+                    <span class="highlight">[개인 프로젝트] 기획, 디자인, 개발 100% 참여</span>
                     <span>현직 실무자가 포트폴리오를 피드백 해주고 다양한 레퍼런스들을 공유하며 함께 성장하는 플랫폼
                       (포트폴리오 작업 중 레퍼런스나 포트폴리오 피드백을 받으면 좋을 것 같아 제작)</span>
                   </div>
                 </div>
                 <div class="d-flex btnArea">
-                  <button class="page c-pointer">방문하기</button>
-                  <button class="pdf c-pointer">프로세스 페이지</button>
+                  <button class="page c-pointer" onclick="goSite('portlive')">방문하기</button>
+                  <button class="pdf c-pointer" onclick="goPdf('portlive')">프로세스 페이지</button>
                 </div>
               </div>
             </div>
           </div>
           <div class="item d-flex">
-            <img src="./img/portLive.png" alt="portLive 이미지" class="itemImg" />
+            <img src="./img/portLive.png" alt="portLive 이미지" class="itemImg" draggable="false" />
             <div class="d-flex testArea">
               <p class="subTitle">
                 아티너리 :: 복합 문화 일정 및 예매 플랫폼
@@ -238,25 +241,25 @@
               <div>
                 <div class="d-flex">
                   <p class="innerTitle">작업기간</p>
-                  <span>9일</span>
+                  <span>4일</span>
                 </div>
                 <div class="d-flex" style="margin: 12px 0 24px 0;">
                   <p class="innerTitle">개요</p>
                   <div>
-                    <span class="highlight">기획, 디자인, 개발 100% 개인참여</span>
+                    <span class="highlight">[개인 프로젝트] 기획, 디자인, 개발 100% 참여</span>
                     <span>전시・연극・뮤지컬 등 복합 문화에 대한 정보 제공과 예매, 리뷰, 추천 기능을 지원하는 플랫폼
                       (코로나 이후로 Well-Being 열풍에 따라 늘어난 복합 문화 생활의 수요에 따라 제작)</span>
                   </div>
                 </div>
                 <div class="d-flex btnArea">
-                  <button class="page c-pointer">방문하기</button>
-                  <button class="pdf c-pointer">프로세스 페이지</button>
+                  <button class="page c-pointer" onclick="goSite('artinery')">방문하기</button>
+                  <button class="pdf c-pointer" onclick="goPdf('artinery')">프로세스 페이지</button>
                 </div>
               </div>
             </div>
           </div>
           <div class="item d-flex">
-            <img src="./img/portLive.png" alt="portLive 이미지" class="itemImg" />
+            <img src="./img/portLive.png" alt="portLive 이미지" class="itemImg"  draggable="false"/>
             <div class="d-flex testArea">
               <p class="subTitle">
                 아파트멘터리 :: 아파트 인테리어 리모델링 서비스
@@ -264,25 +267,25 @@
               <div>
                 <div class="d-flex">
                   <p class="innerTitle">작업기간</p>
-                  <span>9일</span>
+                  <span>3일</span>
                 </div>
                 <div class="d-flex" style="margin: 12px 0 24px 0;">
                   <p class="innerTitle">개요</p>
                   <div>
-                    <span class="highlight">디자인, 개발 100% 개인참여</span>
+                    <span class="highlight">[개인 프로젝트] 디자인, 개발 100% 참여</span>
                     <span>아파트 내부 인테리어와 리모델링 공사를 직접 시공・관리하며 자재부터 인테리어 아이디어를 제공하는 플랫폼
                       (최근 부동산 가격의 상승으로 건축보다 인테리어・리모델링이 늘어나는 사회현상에서 착안하여 작업)</span>
                   </div>
                 </div>
                 <div class="d-flex btnArea">
-                  <button class="page c-pointer">방문하기</button>
-                  <button class="pdf c-pointer">프로세스 페이지</button>
+                  <button class="page c-pointer" onclick="goSite('apart')">방문하기</button>
+                  <button class="pdf c-pointer" onclick="goPdf('apart')">프로세스 페이지</button>
                 </div>
               </div>
             </div>
           </div>
           <div class="item d-flex">
-            <img src="./img/portLive.png" alt="portLive 이미지" class="itemImg" />
+            <img src="./img/portLive.png" alt="portLive 이미지" class="itemImg"  draggable="false"/>
             <div class="d-flex testArea">
               <p class="subTitle">
                 Youssoful :: The scent stays here
@@ -290,45 +293,70 @@
               <div>
                 <div class="d-flex">
                   <p class="innerTitle">작업기간</p>
-                  <span>9일</span>
+                  <span>5일</span>
                 </div>
                 <div class="d-flex" style="margin: 12px 0 24px 0;">
                   <p class="innerTitle">개요</p>
                   <div>
-                    <span class="highlight">디자인, 개발 100% 개인참여</span>
+                    <span class="highlight">[개인 프로젝트] 디자인, 개발 100% 참여</span>
                     <span>현직 실무자가 포트폴리오를 피드백 해주고 다양한 레퍼런스들을 공유하며 함께 성장하는 플랫폼
                       (포트폴리오 작업 중 레퍼런스나 포트폴리오 피드백을 받으면 좋을 것 같아 제작)</span>
                   </div>
                 </div>
                 <div class="d-flex btnArea">
-                  <button class="page c-pointer">방문하기</button>
-                  <button class="pdf c-pointer">프로세스 페이지</button>
+                  <button class="page c-pointer" onclick="goSite('youssoful')">방문하기</button>
+                  <button class="pdf c-pointer" onclick="goPdf('youssoful')">프로세스 페이지</button>
                 </div>
               </div>
             </div>
           </div>
           <div class="item d-flex">
-            <img src="./img/portLive.png" alt="portLive 이미지" class="itemImg" />
+            <img src="./img/portLive.png" alt="portLive 이미지" class="itemImg"  draggable="false"/>
             <div class="d-flex testArea">
               <p class="subTitle">
-                포트라이브 :: 포트폴리오 피드백 및 레퍼런스 공유 플랫폼
+                입찰로 :: 투명하고 공정한 건축 관리 플랫폼
               </p>
               <div>
                 <div class="d-flex">
                   <p class="innerTitle">작업기간</p>
-                  <span>9일</span>
+                  <span>5개월</span>
                 </div>
                 <div class="d-flex" style="margin: 12px 0 24px 0;">
                   <p class="innerTitle">개요</p>
                   <div>
-                    <span class="highlight">기획, 디자인, 개발 100% 개인참여</span>
+                    <span class="highlight">[팀 프로젝트] 디자인 30%, 개발 40%(프론트엔드) 참여</span>
                     <span>현직 실무자가 포트폴리오를 피드백 해주고 다양한 레퍼런스들을 공유하며 함께 성장하는 플랫폼
                       (포트폴리오 작업 중 레퍼런스나 포트폴리오 피드백을 받으면 좋을 것 같아 제작)</span>
                   </div>
                 </div>
                 <div class="d-flex btnArea">
-                  <button class="page c-pointer">방문하기</button>
-                  <button class="pdf c-pointer">프로세스 페이지</button>
+                  <button class="page c-pointer" onclick="goSite('ipchal')">방문하기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item d-flex">
+            <img src="./img/portLive.png" alt="portLive 이미지" class="itemImg" draggable="false" />
+            <div class="d-flex testArea">
+              <p class="subTitle">
+                27와트 :: 나의 브랜드를 위한 최초의 선택
+              </p>
+              <div>
+                <div class="d-flex">
+                  <p class="innerTitle">작업기간</p>
+                  <span>6일</span>
+                </div>
+                <div class="d-flex" style="margin: 12px 0 24px 0;">
+                  <p class="innerTitle">개요</p>
+                  <div>
+                    <span class="highlight">[개인 프로젝트] 기획, 디자인, 개발 100% 참여</span>
+                    <span>현직 실무자가 포트폴리오를 피드백 해주고 다양한 레퍼런스들을 공유하며 함께 성장하는 플랫폼
+                      (포트폴리오 작업 중 레퍼런스나 포트폴리오 피드백을 받으면 좋을 것 같아 제작)</span>
+                  </div>
+                </div>
+                <div class="d-flex btnArea">
+                  <button class="page c-pointer" onclick="goSite('27wart')">방문하기</button>
+                  <button class="pdf c-pointer" onclick="goPdf('27wart')">프로세스 페이지</button>
                 </div>
               </div>
             </div>
@@ -340,49 +368,53 @@
 
     <section class="design">
       <div class="d-flex">
-        <div class="left">
-          <h4 class="sectionTitle" style="margin-bottom: 12px">Design Project</h4>
+        <div class="left" data-aos="fade-right">
+          <h4 class="sectionTitle" data-aos="fade-right" style="margin-bottom: 12px">Design Project</h4>
           <p style="padding-right:40px">연습도 실전처럼! 언제 어떤 디자인을 맡아도 작업이 가능하도록
             웹 배너 디자인부터 X배너 및 리플렛, SNS 카드뉴스까지
             다양하게 작업하였습니다.</p>
           <p style="font-size: 14px; color: #ffffff42; font-weight: bold;">* 클릭 시 원래 사이즈로 이미지 확인이 가능합니다.</p>
         </div>
 
-        <div class="right">
+        <div class="right" data-aos="fade-left" data-aos-delay="500">
           <div class="firstLine">
-            <div class="item"><img src="./img/thumb/1-1.png" alt="디자인 파일 1" onclick="loadImage('1-1')"></div>
-            <div class="item"><img src="./img/thumb/1-2.png" alt="디자인 파일 2" onclick="loadImage('2-2')"></div>
-            <div class="item"><img src="./img/thumb/1-3.png" alt="디자인 파일 3" onclick="loadImage('3-3')"></div>
-            <div class="item"><img src="./img/thumb/1-4.png" alt="디자인 파일 4" onclick="loadImage('4-4')"></div>
+            <div class="item"><img src="./img/thumb/1-1.png" alt="디자인 파일 1" onclick="loadImage('1-1')" draggable="false"></div>
+            <div class="item"><img src="./img/thumb/1-2.png" alt="디자인 파일 2" onclick="loadImage('1-2')" draggable="false"></div>
+            <div class="item"><img src="./img/thumb/1-3.png" alt="디자인 파일 3" onclick="loadImage('1-3')" draggable="false"></div>
+            <div class="item"><img src="./img/thumb/1-4.png" alt="디자인 파일 4" onclick="loadImage('1-4')" draggable="false"></div>
           </div>
           <div class="secondLine">
-            <div class="item"><img src="./img/thumb/2-1.png" alt="디자인 파일 5" onclick="loadImage('2-1')"></div>
+            <div class="item"><img src="./img/thumb/2-1.png" alt="디자인 파일 5" onclick="loadImage('2-1')" draggable="false"></div>
           </div>
           <div class="thirdLine">
-            <div class="item"><img src="./img/thumb/3-1.png" alt="디자인 파일 6" onclick="loadImage('3-1')"></div>
-            <div class="item"><img src="./img/thumb/3-2.png" alt="디자인 파일 7" onclick="loadImage('3-2')"></div>
+            <div class="item"><img src="./img/thumb/3-1.png" alt="디자인 파일 6" onclick="loadImage('3-1')" draggable="false"></div>
+            <div class="item"><img src="./img/thumb/3-2.png" alt="디자인 파일 7" onclick="loadImage('3-2')" draggable="false"></div>
           </div>
           <div class="secondLine">
-            <div class="item"><img src="./img/thumb/4-1.png" alt="디자인 파일 8" onclick="loadImage('4-1')"></div>
+            <div class="item"><img src="./img/thumb/4-1.png" alt="디자인 파일 8" onclick="loadImage('4-1')" draggable="false"></div>
           </div>
           <div class="forthLine">
-            <div class="item"><img src="./img/thumb/5-1.png" alt="디자인 파일 9" onclick="loadImage('5-1')"></div>
-            <div class="item"><img src="./img/thumb/5-2.png" alt="디자인 파일 10" onclick="loadImage('5-2')"></div>
+            <div class="item"><img src="./img/thumb/5-1.png" alt="디자인 파일 9" onclick="loadImage('5-1')" draggable="false"></div>
+            <div class="item"><img src="./img/thumb/5-2.png" alt="디자인 파일 10" onclick="loadImage('5-2')" draggable="false"></div>
           </div>
         </div>
       </div>
     </section>
 
     <div class="imageViewer">
-      <img src="" alt="이미지 경로 X" class="image">
+
+      <div class="pannel">
+        <img src="" alt="이미지 경로 X" class="image" draggable="false">
+        <div class="viewerClose">X</div>
+      </div>
     </div>
 
   </main>
 
-  <footer>
+  <footer class="footer">
     <div>
       <div>
-        <h4 class="fadeText" style="font-size: 120px;">Thank You</h4>
+        <h4 class="fadeText" style="font-size: 120px; user-select: none;">Thank You</h4>
         <h2 style="font-size: 60px;">감사합니다!</h2>
       </div>
       <p style="font-size: 20px; font-weight: 300; margin-top: 23px;">마음에 드셨다면 언제 어디서든<br>다시 만날 수 있기를 진심으로 바라겠습니다.<br>항상
@@ -405,8 +437,9 @@
   </footer>
 
 
-   <script>
+  <script>
     $(document).ready(function () {
+      AOS.init();
       /* 캐러샐 */
       const $track = $(".carousel-track");
       let $item = $(".carousel-item");
@@ -417,6 +450,90 @@
       let image = $(".imageViewer .image"); //이미지 태그
       let imageViewer = $('.imageViewer');
 
+      goSite = (link) => {
+        if (link == 'portlive') {
+          window.open('https://ta3h0.github.io/portlive', '_blank');
+        } else if (link == 'artinery') {
+          window.open('https://ta3h0.github.io/artinery', '_blank');
+        } else if (link == 'apart') {
+          window.open('https://ta3h0.github.io/apartmentary_', '_blank');
+        } else if (link == 'youssoful') {
+          window.open('https://youssoful-portfolio.netlify.app', '_blank');
+        } else if (link == 'ipchal') {
+          window.open('https://cmapex.com', '_blank')
+        } else if (link == '27wart') {
+          window.open('https://ta3h0.github.io/27Wart', '_blank')
+        }
+      }
+
+      goTab = (sectionClass) => {
+        const section = document.querySelector(`.${sectionClass}`);
+        if (section) {
+          const top = section.offsetTop;
+          window.scrollTo({
+            top: top,
+            behavior: 'smooth'
+          });
+        } else {
+          console.error('해당 클래스를 가진 섹션을 찾을 수 없습니다.');
+        }
+      };
+
+      goPdf = (link) => {
+        if (link == 'portlive') {
+          window.open('', '_blank')
+        } else if (link == 'artinery') {
+          window.open('ta3h0.github.io/27Wart', '_blank')
+        } else if (link == 'apart') {
+          window.open('ta3h0.github.io/27Wart', '_blank')
+        } else if (link == 'youssoful') {
+          window.open('ta3h0.github.io/27Wart', '_blank')
+        } else if (link == '27wart') {
+          window.open('ta3h0.github.io/27Wart', '_blank')
+        }
+      }
+
+      window.addEventListener('scroll', () => {
+        const sectionMap = [
+          { className: 'heroSection', menuClass: 'headerHero' },
+          { className: 'aboutMe', menuClass: 'headerAboutMe' },
+          { className: 'web', menuClass: 'headerWeb' },
+          { className: 'design', menuClass: 'headerDesign' },
+          { className: 'footer', menuClass: 'headerContect' },
+        ];
+
+        const scrollY = window.scrollY;
+        const buffer = window.innerHeight / 3; // 중간 지점으로 판단 기준 조정
+
+        let currentSection = '';
+
+        sectionMap.forEach(({ className }) => {
+          const section = document.querySelector(`.${className}`);
+          if (section) {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+            if (scrollY >= sectionTop - buffer) {
+              currentSection = className;
+            }
+          }
+        });
+
+        // 모든 메뉴에서 active 제거 후 현재 섹션 메뉴에 active 추가
+        sectionMap.forEach(({ menuClass, className }) => {
+          const menuItem =
+            menuClass === 'headerContect'
+              ? document.querySelector('.headerContect')
+              : document.querySelector(`.${menuClass}`);
+          if (menuItem) {
+            if (className === currentSection) {
+              menuItem.classList.add('active');
+            } else {
+              menuItem.classList.remove('active');
+            }
+          }
+        });
+      });
 
       loadImage = (count) => {
         console.log(count)
