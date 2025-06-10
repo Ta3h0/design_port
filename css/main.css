@@ -45,12 +45,13 @@ b {
 section {
   width: 100%;
   max-width: 1440px;
-  padding: 20px 0;
+  padding: 0 20px;
   margin: 160px auto;
 }
 
 .f-width {
   max-width: none !important;
+  padding: 0;
 }
 
 .sectionTitle {
@@ -170,11 +171,40 @@ img {
 
 /* heroSection */
 .heroSection {
-  height: 100vh;
   background: url("../img/mainBg.svg");
   text-align: center;
   user-select: none;
+  position: relative;
+  height: 400vh;
 }
+
+.heroIntro {
+  position: sticky;
+    top: 0;
+    left: 0;
+  height: 100vh;
+  min-height: fit-content;
+}
+
+.squareArea {
+  position: sticky;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  margin-top: 80px;  
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+.square {
+  width: calc(20% - 10px);
+}
+
+
+
+
 
 .visualArea {
   display: flex;
@@ -183,11 +213,11 @@ img {
 /* heroSection > swiper */
 .phrase-box {
   position: relative;
-  perspective: 1000px;
-  width: 100%;
-  height: 100px;
-  margin: 150px auto 0px auto;
-  overflow: hidden;
+    perspective: 1000px;
+    width: 90%;
+    height: 100px;
+    margin: 150px auto 0px auto;
+    overflow: hidden;
 }
 
 .cube {
@@ -253,12 +283,6 @@ img {
   animation: wheel 1.5s infinite ease-out;
 }
 
-.squareArea {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 40px;
-  margin-top: 80px;
-}
 
 /* About Me */
 .aboutMe .inner {
