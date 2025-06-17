@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Ta3h0 포트폴리오</title>
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi" />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css" />
+  <style>
+    * {
+      color: #4F4F4F;
+    }
+
+    body {
+      padding-top: 100px;
+    }
+
+    .d-flex {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1280px;
+      margin: 0 auto;
+      justify-content: space-between;
+      padding: 0 20px 140px 20px;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      width: calc((100% / 3) - 12px);
+      background-color: #d9d9d9;
+      padding: 24px;
+      transition: .3s;
+      border-radius: 12px;
+      margin-top: 18px;
+      justify-content: space-between;
+    }
+
+    .item img {
+      display: block;
+      width: 25px;
+      margin-bottom: 10px;
+    }
+
+    .item:hover {
+      background-color: #f2f2f2;
+    }
+
+    p {
+      margin-bottom: 30px;
+      color: #4F4F4F;
+    }
+
+    span {
+      color: #767676;
+      font-size: 14px;
+    }
+
+    .closeBtn {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      z-index: 1;
+      transform: translateY(-50%);
+    }
+
+    h1 {
+      position: relative;
+    }
+
+    @media screen and (max-width: 1280px) {
+      .item {
+    width: calc(50% - 12px);
+  }
+    }
+    @media screen and (max-width: 960px) {
+      .item {
+    width: 100%;
+  }
+    }
+  </style>
+</head>
+
+<body style="background-color: #141414c0; backdrop-filter: blur(6px);">
+  <h1 style="max-width: 1280px; padding: 0 20px; margin: 0 auto 40px auto !important; color: #f2f2f2;">주변 사람들의
+    평가
+    <img src="img/close.svg" alt="닫기" class="closeBtn" onclick="parent.closePopup()">
+  </h1>
+  <div class="d-flex">
+    <div class="item">
+      <div>
+        <img src="img/semi-colon.svg" alt="세미콜론">
+        <p>디자이너로 입사해서 갑자기 개발을 맡게되어서 vue를 익히기 쉽지 않았을텐데 업무시간 외에 따로 시간내어 공부하시는 모습을 보고 굉장히 성실하다고 생각했습니다. 환경이 자주 변해도 잘 적응하고
+          새로운 기술을 배우는 것에 흥미를 느끼시니 앞으로도 잘 하실거에요~</p>
+      </div>
+      <span class="user">이*철 개발부 부장 / ㈜ 한****</span>
+    </div>
+
+    <div class="item">
+      <div>
+        <img src="img/semi-colon.svg" alt="세미콜론">
+        <p>회의준비부터 업무까지 여러가지 일을 떠맡아 하느라 시간이 부족했을텐데 꼼꼼하게 준비하는 모습이 인상적이였습니다</p>
+      </div>
+      <span class="user">양*철 과장 / ㈜ 한****</span>
+    </div>
+
+    <div class="item">
+      <div>
+        <img src="img/semi-colon.svg" alt="세미콜론">
+        <p>태호씨는 코딩하다가 막혀도 무작정 질문을 하는 것이 아닌 논리적으로 다양하게 생각해보고 직접 해결하는 모습이 큰 장점이라고 생각해요. 앞으로 문제해결에 있어서 지금처럼 노련하게 해결하길 바랄게요.
+        </p>
+      </div>
+      <span class="user">하*정 강사 / 그린 컴퓨터 아카데미</span>
+    </div>
+
+    <div class="item">
+      <div>
+        <img src="img/semi-colon.svg" alt="세미콜론">
+        <p>디자인을 할때 문제부터 생각하는 모습에 본받아야겠다고 생각했습니다. 사용자 관점에서 섬세한 관심과 고민이 강점이라고 생각하며, 팀 프로젝트할때 기한까지 준수하시는 모습이 인상적이였습니다.</p>
+      </div>
+      <span class="user">김*호 수강생 / 그린 컴퓨터 아카데미</span>
+    </div>
+
+    <div class="item">
+      <div>
+        <img src="img/semi-colon.svg" alt="세미콜론">
+        <p>같이 작업하면서 이야기 많이 나눴는데 늘 잘할 수 있다고 응원해주셔서 감사해요 저 혼자 끙끙 앓고있으면 같이 고민해주시고 늘 친절하게 알려주셔서 감사했습니다.</p>
+      </div>
+      <span class="user">김*정 수강생 / 그린 컴퓨터 아카데미</span>
+    </div>
+
+    <div class="item">
+      <div>
+        <img src="img/semi-colon.svg" alt="세미콜론">
+        <p>구글에 코드 검색안하고 혼자서 인터렉티브 구현하는거보고 진짜 엄청 놀랐어요.. 저는 직접 기능을 만들거라곤 생각도 못했는데.. 그런거 때문에 남들보다 빠르게 실력이 느신거 같아요</p>
+      </div>
+      <span class="user">박*호 수강생 / 그린 컴퓨터 아카데미</span>
+    </div>
+
+    <div class="item">
+      <div>
+        <img src="img/semi-colon.svg" alt="세미콜론">
+        <p>태호님! 솔직히 같은 수강생으로서 자바 스크립트를 배운 시간이 짧아서 기능을 만드는게 많이 어려운 걸 알고있어요. 그럼에도 불구하고 솔선수범해서 어려운 기능구현 같이 해주시고 CSS 어긋나는 것들
+          자세하게 봐주셔서 같은 팀원으로 좋기도 했지만 죄송했어요. 그리고 다른 팀원 모두가 느꼈겠지만 소통을 너무 잘해주셔서 팀원으로서 좋았어요!
+        <p>
+      </div>
+      <span class="user">서*정 수강생 / 그린컴퓨터 아카데미</span>
+    </div>
+
+    <div class="item">
+      <div>
+        <img src="img/semi-colon.svg" alt="세미콜론">
+        <p>의사소통에 적극적이셨습니다</p>
+      </div>
+      <span class="user">박*하 수강생 / 그린 컴퓨터 아카데미</span>
+    </div>
+
+    <div class="item">
+      <div>
+        <img src="img/semi-colon.svg" alt="세미콜론">
+        <p>스터디 운영을 함께 도와주시고 피드백을 열심히 준비해주셔서 팀원들이 더 으쌰으쌰 했었던 것 같아요. 다음에도 같이 작업할 수 있으면 좋겠습니다 ㅎㅎ</p>
+      </div>
+      <span class="user">조*서 스터디장 / 스터디그룹 무드인</span>
+    </div>
+
+    <div class="item">
+      <div>
+        <img src="img/semi-colon.svg" alt="세미콜론">
+        <p>주간 디자인 리뷰때 사소한 부분까지 놓치지 않고 피드백 해주셔서 사이드 프로젝트 완성도가 높아졌어요. 책임감있는 자세가 멋있었어요.</p>
+      </div>
+      <span class="user">정*진 스터디원 / 스터디그룹 무드인</span>
+    </div>
+
+    <div class="item">
+      <div>
+        <img src="img/semi-colon.svg" alt="세미콜론">
+        <p>매주 목표를 철저히 지키시고 진행상황 보고시간때 꼼꼼히 내용 공유해주셔서 스터디가 지체되지 않았습니다! 열심히 하시는게 보기 좋았어요</p>
+      </div>
+      <span class="user">박*언 스터디원 / 스터디그룹 무드인</span>
+    </div>
+
+    <div class="item">
+      <div>
+        <img src="img/semi-colon.svg" alt="세미콜론">
+        <p>복잡한 기술 포기 끝까지 안하고 학습함. 기능 구현에 집착이 있음. 스터디 중 이해가 어렵거나 모르는 부분은 적극적으로 물어보고 토론함. 늘 응원하겠습니다.</p>
+      </div>
+      <span class="user">유*민 스터디원 / 스터디그룹 무드인</span>
+    </div>
+
+
+  </div>
+
+  <script>
+
+  </script>
+
+</body>
+
+</html>
